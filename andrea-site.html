@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Método Fénix · Limpieza energética a distancia con cuarzos</title>
+<meta name="description" content="Limpieza energética a distancia con cristales de cuarzo para quienes atraviesan un momento de quiebre y buscan volver a empezar.">
+<link rel="icon" href="assets/fenix-hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080b12; --card:#0e121a; --line:#222733;
+  --gold:#d9b25f; --gold-soft:#b8944a; --orange:#ff6a13; --orange-glow:rgba(255,106,19,.35);
+  --text:#ece6da; --muted:#a9a69e;
+  --serif:'Lora',Georgia,serif; --sans:'Roboto',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:400 1.05rem/1.7 var(--sans);
+  background-image:radial-gradient(ellipse at 50% -10%,rgba(217,178,95,.12),transparent 55%)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.wrap{width:min(1080px,92%);margin-inline:auto}
+section{padding:5rem 0}
+h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--gold);line-height:1.2}
+h1{font-size:clamp(2.2rem,5.5vw,3.6rem)}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:1rem}
+h3{font-size:1.25rem;margin-bottom:.4rem}
+p{max-width:62ch}
+.muted{color:var(--muted)}
+.art{mix-blend-mode:screen}
+
+.btn{display:inline-block;margin-top:1.6rem;padding:.85rem 1.7rem;border-radius:8px;
+  border:1px solid var(--orange);background:rgba(255,106,19,.08);color:#ffb27a;
+  font-weight:700;letter-spacing:.04em;text-decoration:none;text-transform:uppercase;font-size:.9rem;
+  box-shadow:0 0 22px var(--orange-glow);transition:background .2s,color .2s}
+.btn:hover{background:var(--orange);color:#14100b}
+
+nav{position:sticky;top:0;z-index:5;background:rgba(8,11,18,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:.7rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--serif);color:var(--gold);text-decoration:none;font-weight:600}
+.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+nav ul{display:flex;gap:1.4rem;list-style:none;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-size:.92rem}
+nav ul a:hover{color:var(--gold)}
+@media(max-width:760px){nav ul{display:none}}
+
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.hero p{margin-top:1.2rem;font-size:1.15rem}
+.hero img{width:100%;max-width:460px;margin-inline:auto;filter:drop-shadow(0 0 40px rgba(255,140,40,.25))}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:clamp(1.6rem,4vw,3rem)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.split img{width:100%;max-width:340px;margin-inline:auto}
+.split.flip img{order:-1}
+.split p+p{margin-top:1rem}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.4rem}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.8rem 1.4rem;text-align:center}
+.step img{width:112px;height:112px;margin:0 auto 1rem;border-radius:50%}
+.step h3 span{color:var(--orange)}
+.step p{margin-inline:auto;font-size:.98rem;color:var(--muted)}
+.center{text-align:center}.center p{margin-inline:auto}
+
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.benefits div{border-left:2px solid var(--gold-soft);padding:.2rem 0 .2rem 1.1rem}
+.benefits p{font-size:.98rem;color:var(--muted)}
+
+details{border-bottom:1px solid var(--line);padding:1.1rem 0}
+summary{cursor:pointer;font-family:var(--serif);font-size:1.15rem;color:var(--gold);list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';color:var(--orange);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:'–'}
+details p{margin-top:.8rem;color:var(--muted)}
+
+.final{text-align:center;background:radial-gradient(ellipse at 50% 100%,rgba(255,106,19,.14),transparent 60%)}
+.final img{width:220px;margin:0 auto 1rem}
+.final p{margin-inline:auto}
+footer{padding:2rem 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.88rem}
+
+@media(max-width:820px){
+  .hero .wrap,.split{grid-template-columns:1fr}
+  .hero img{order:-1;max-width:300px}
+  .split.flip img{order:0}
+  .steps,.benefits{grid-template-columns:1fr}
+  section{padding:3.5rem 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.ph{display:grid;place-items:center;text-align:center;aspect-ratio:1;width:100%;max-width:340px;margin-inline:auto;border:1.5px dashed var(--gold-soft);border-radius:16px;color:var(--muted);font-size:.85rem;padding:1rem}
+.ph b{color:var(--gold);display:block}
+.step .ph{width:112px;max-width:112px;border-radius:50%;margin:0 auto 1rem;font-size:.65rem;padding:.4rem}
+nav .ph{width:34px;aspect-ratio:1;border-radius:50%;font-size:0;padding:0}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}
+.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+@media(max-width:820px){.gallery{grid-template-columns:repeat(2,1fr)}}
+.wa{position:fixed;right:1.1rem;bottom:1.1rem;z-index:9;display:flex;align-items:center;gap:.5rem;padding:.75rem 1.2rem;border-radius:999px;background:var(--orange);color:#14100b;font-weight:700;text-decoration:none;box-shadow:0 0 24px var(--orange-glow)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#inicio"><img data-slot src="assets/fenix-hero.jpg" alt="" width="34" height="34">ARDEN Terapias holisticas</a>
+    <ul>
+      <li><a href="#metodo">El método</a></li>
+      <li><a href="#proceso">Cómo funciona</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap" style="padding:5rem 0">
+    <div>
+      <h1>Renace. Transforma tu energía.</h1>
+      <p>Limpieza energética a distancia con cristales de cuarzo. Un espacio de renovación para hombres y mujeres de 30 a 50 años que atraviesan un momento de quiebre y buscan volver a empezar.</p>
+      <a class="btn" href="https://wa.me/5491166449549?text=Hola!%20Quiero%20reservar%20una%20sesi%C3%B3n%20de%20limpieza%20energ%C3%A9tica" target="_blank" rel="noopener">Iniciar mi renovación</a>
+    </div>
+    <img data-slot class="art" src="assets/fenix-hero.jpg" alt="Fénix formado por cristales de cuarzo, con destellos dorados" width="285" height="280">
+  </div>
+</header>
+
+<section id="problema">
+  <div class="wrap">
+    <div class="panel split">
+      <div>
+        <h2>¿Sentís que tu energía está estancada o al límite?</h2>
+        <p>Hay etapas de la vida donde las crisis profesionales, de pareja o personales nos saturan. Te sentís cansado/a, bloqueado/a, y por más que lo intentás, las cosas no fluyen.</p>
+        <p>El estrés y las crisis bloquean tu flujo vital. No estás solo/a.</p>
+      </div>
+      <img data-slot class="art" src="assets/cristales.jpg" alt="Cristales de cuarzo con un fénix naranja en el centro" width="240" height="265">
+    </div>
+  </div>
+</section>
+
+<section id="metodo">
+  <div class="wrap split flip">
+    <img data-slot class="art" src="assets/fenix-alas.jpg" alt="Fénix de cristal con las alas abiertas" width="240" height="265">
+    <div>
+      <h2>El método Fénix: limpieza energética a distancia</h2>
+      <p>Así como el ave fénix transmuta las cenizas en fuerza, las sesiones de armonización con cristales de cuarzo limpian las frecuencias densas de tu campo áurico. Trabajamos a nivel vibracional para disolver bloqueos y devolverte la vitalidad, sin importar en qué parte del mundo te encuentres.</p>
+      <p><strong>¿Por qué a distancia?</strong> La energía no entiende de fronteras ni de kilómetros. Los cuarzos actúan como amplificadores y conductores puros: recibís la sintonía y la sanación desde la comodidad y privacidad de tu hogar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="proceso">
+  <div class="wrap center">
+    <h2>Tu camino hacia la renovación en 3 pasos</h2>
+    <div class="steps" style="text-align:left">
+      <div class="step center">
+        <img data-slot src="assets/icono-diagnostico.jpg" alt="Cristal dentro de un círculo dorado" width="112" height="112">
+        <h3>Reserva y diagnóstico</h3>
+        <p>Agendás tu sesión online y me contás brevemente qué área de tu vida sentís más afectada o qué crisis estás atravesando.</p>
+      </div>
+      <div class="step center">
+        <img data-slot src="assets/icono-limpieza.jpg" alt="Fénix con red de estrellas dentro de un círculo dorado" width="112" height="112">
+        <h3>Limpieza <span>remota</span></h3>
+        <p>En el día y hora acordados, realizo la limpieza con una red de cuarzos programados para tu frecuencia actual. Solo necesitás estar en un espacio tranquilo.</p>
+      </div>
+      <div class="step center">
+        <img data-slot src="assets/icono-reporte.jpg" alt="Fénix de cristal dentro de un círculo dorado" width="112" height="112">
+        <h3>Reporte y <span>claridad</span></h3>
+        <p>Al finalizar te envío un reporte con lo trabajado, los bloqueos liberados y recomendaciones prácticas para mantener tu energía en alta vibración.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios">
+  <div class="wrap">
+    <h2>Lo que vas a sentir</h2>
+    <p class="muted">Cada persona es un universo y las sensaciones varían.</p>
+    <div class="benefits">
+      <div><h3>Durante la sesión</h3><p>Algunos sienten un calor suave, un sutil hormigueo, ganas de respirar profundo o una relajación tan intensa que se quedan dormidos.</p></div>
+      <div><h3>Después</h3><p>Lo más común es una profunda sensación de ligereza, como si te hubieras quitado una mochila pesada de encima, con mucha claridad mental.</p></div>
+      <div><h3>Primeras 24 horas</h3><p>Puede aparecer un “cansancio de descarga”: es el cuerpo procesando la liberación del estrés acumulado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="sobre-mi">
+  <div class="wrap">
+    <div class="panel split">
+      <div>
+        <h2>Sobre mí y mi propósito</h2>
+        <p>Te acompaño a transmutar la crisis en fuerza, como el fénix. [Tu Nombre/Marca].</p>
+        <p>Para notar un cambio ante una crisis aguda (un divorcio, un quiebre profesional, un duelo o un agotamiento extremo) recomiendo un ciclo de <strong>3 sesiones</strong>, separadas por 15 o 21 días. Así desmantelamos las capas más profundas del estancamiento, sellamos el campo áurico y consolidamos tu renacimiento. El alivio y la claridad se sienten desde la primera sesión.</p>
+        <a class="btn" href="https://wa.me/5491166449549?text=Hola!%20Quiero%20reservar%20una%20sesi%C3%B3n%20de%20limpieza%20energ%C3%A9tica" target="_blank" rel="noopener">¿Cuánto cuesta una sesión?</a>
+      </div>
+      <img data-slot class="art" src="assets/fenix-alas.jpg" alt="Fénix de cristal, símbolo de la marca" width="240" height="265">
+    </div>
+  </div>
+</section>
+
+<section id="galeria" hidden>
+  <div class="wrap">
+    <h2>Galería</h2>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <details>
+      <summary>¿Cómo es posible realizar una limpieza energética a distancia?</summary>
+      <p>La energía no está limitada por el tiempo ni por el espacio físico. En la sanación vibracional se entiende que todo es frecuencia e información. Los cuarzos actúan como amplificadores y conductores de esa energía. Con tu nombre completo, fecha de nacimiento y los datos de tu diagnóstico, abro un canal de sintonía directa con tu campo áurico para limpiar y ordenar tus centros energéticos, estés donde estés.</p>
+    </details>
+    <details>
+      <summary>¿Tengo que conectarme a una videollamada como Zoom o Meet?</summary>
+      <p>No es necesario. Las sesiones remotas se realizan de forma offline, en el día y horario pautados, para que tengas un espacio de introspección libre de pantallas. No necesitás interrumpir tu jornada ni forzar una conversación frente a la cámara.</p>
+    </details>
+    <details>
+      <summary>¿Qué se siente durante y después de una limpieza?</summary>
+      <p>Durante la sesión, calor suave, hormigueo o relajación profunda. Después, ligereza y claridad mental. En algunos casos hay un cansancio de descarga durante las primeras 24 horas.</p>
+    </details>
+    <details>
+      <summary>¿Cuántas sesiones necesito para notar un cambio ante una crisis?</summary>
+      <p>Vas a sentir alivio y renovación desde la primera sesión. Ante crisis agudas recomendamos un ciclo de 3 sesiones, separadas por 15 o 21 días.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <img data-slot class="art" src="assets/fenix-hero.jpg" alt="" width="220" height="216">
+    <h2>Es momento de resurgir</h2>
+    <p>Transformá tu energía y recuperá tu claridad. El primer paso es reservar tu sesión.</p>
+    <a class="btn" href="https://wa.me/5491166449549?text=Hola!%20Quiero%20reservar%20una%20sesi%C3%B3n%20de%20limpieza%20energ%C3%A9tica" target="_blank" rel="noopener">Reservar mi sesión</a>
+  </div>
+</section>
+
+<a class="wa" href="https://wa.me/5491166449549?text=Hola!%20Quiero%20reservar%20una%20sesi%C3%B3n%20de%20limpieza%20energ%C3%A9tica" target="_blank" rel="noopener">WhatsApp</a>
+
+<footer>WhatsApp: <a href="https://wa.me/5491166449549" target="_blank" rel="noopener">+54 9 11 6644-9549</a><br>© 2026 [Tu Nombre/Marca]. Las sesiones son un acompañamiento energético y no reemplazan la atención médica o psicológica.</footer>
+
+<script>
+/* Cada imagen con data-slot muestra un recuadro con el nombre del archivo si falta. */
+document.querySelectorAll('img[data-slot]').forEach(function(img){
+  img.addEventListener('error',function(){
+    var d=document.createElement('div');d.className='ph';
+    d.innerHTML='<span><b>Falta la imagen</b>'+img.getAttribute('src')+'</span>';
+    img.replaceWith(d);
+  });
+});
+/* Galería: agregá galeria-1.jpg ... galeria-6.jpg en assets/ y aparecen solas. */
+(function(){
+  var box=document.getElementById('gallery'),sec=document.getElementById('galeria'),n=0;
+  for(var i=1;i<=6;i++){(function(i){
+    var im=new Image();im.alt='Foto '+i;im.loading='lazy';
+    im.onload=function(){box.appendChild(im);sec.hidden=false};
+    im.src='assets/galeria-'+i+'.jpg';
+  })(i)}
+})();
+</script>
+</body>
+</html>
